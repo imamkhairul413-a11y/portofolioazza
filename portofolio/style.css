@@ -1,0 +1,122 @@
+/* ==========================================================================
+   COSMIC PORTFOLIO STYLESHEET
+   Dark Space Theme with Neon Blue Glows and Smooth Animations
+   ========================================================================== */
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+/* Base Body Properties */
+html, body {
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.glass-panel:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+/* Active Navigation Item Glow */
+.active-nav {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Tab Switcher Active State */
+.active-tab {
+  background: linear-gradient(135deg, #0284c7, #2563eb) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Typewriter Cursor Blinking Effect */
+.typewriter-cursor {
+  animation: blinkCursor 0.8s infinite alternate;
+}
+
+@keyframes blinkCursor {
+  0% {
+    border-color: rgba(56, 189, 248, 1);
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Floating Navbar Scrolled State */
+.navbar-scrolled {
+  background: rgba(3, 7, 18, 0.88) !important;
+  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.4), 0 0 15px rgba(56, 189, 248, 0.3) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+/* Glowing Neon Borders */
+.neon-border-blue {
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4), inset 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.neon-border-purple {
+  border: 1px solid #c084fc;
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.4), inset 0 0 15px rgba(192, 132, 252, 0.2);
+}
+
+/* Starfield Canvas Positioning */
+#spaceCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Subtle Shimmer for Highlighting */
+@keyframes cosmicShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.cosmic-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: cosmicShimmer 4s infinite linear;
+}
+
+/* Media Queries for fine tuning */
+@media (max-width: 640px) {
+  #floatingNavbar {
+    width: 95%;
+  }
+}
